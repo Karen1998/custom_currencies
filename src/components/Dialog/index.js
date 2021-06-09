@@ -1,1 +1,1 @@
-export { default } from './DialogComponent'
+export { default } from "./DialogComponent";

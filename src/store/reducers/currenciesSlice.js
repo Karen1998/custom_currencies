@@ -1,20 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const sliceName = 'currencies';
+const sliceName = "currencies";
 
 export const currenciesSlice = createSlice({
   name: sliceName,
   initialState: {
     data: [],
-    loading: 'idle'
+    loading: "idle",
   },
   reducers: {
     currenciesLoading: (state) => {
-      if (state.loading === 'idle') {
+      if (state.loading === "idle") {
         return {
           ...state,
-          loading: 'pending'
-        }
+          loading: "pending",
+        };
       }
     },
     addCurrency: (state, action) => {
@@ -24,28 +24,26 @@ export const currenciesSlice = createSlice({
         data: [
           ...state.data,
           {
-            ...action.payload
-          }
+            ...action.payload,
+          },
         ],
-        loading: 'idle'
-      }
+        loading: "idle",
+      };
     },
     initCurrencies: (state, action) => {
-      return  {
+      return {
         ...state,
-        data: [
-          ...action.payload
-        ],
-        loading: 'idle'
-      }
+        data: [...action.payload],
+        loading: "idle",
+      };
     },
     removeCurrency: (state, action) => {
       // Need currency id pass as payload
       return {
         ...state,
         data: state.data.filter((c) => c.id !== action.payload),
-        loading: 'idle'
-      }
+        loading: "idle",
+      };
     },
     editCurrency: (state, action) => {
       // Need currency object pass as payload
@@ -53,25 +51,20 @@ export const currenciesSlice = createSlice({
         ...state,
         data: state.data.map((c) => {
           if (action.payload.id === c.id) {
-            return action.payload
+            return action.payload;
           }
-  
-          return c
+
+          return c;
         }),
-        loading: 'idle'
-      }
+        loading: "idle",
+      };
     },
   },
-})
+});
 
-export const {
-  addCurrency,
-  removeCurrency,
-  editCurrency,
-  initCurrencies,
-  currenciesLoading
-} = currenciesSlice.actions
+export const { addCurrency, removeCurrency, editCurrency, initCurrencies, currenciesLoading } =
+  currenciesSlice.actions;
 
 export const currenciesSelector = (state) => state[sliceName];
 
-export default currenciesSlice.reducer
+export default currenciesSlice.reducer;

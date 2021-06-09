@@ -1,1 +1,1 @@
-export { default } from './CurrencyTableCell'
+export { default } from "./CurrencyTableCell";

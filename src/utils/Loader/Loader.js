@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, CircularProgress } from '@material-ui/core'
+import React from "react";
+import { Box, CircularProgress } from "@material-ui/core";
 
 const Loader = (styles) => {
   return (
@@ -14,8 +14,7 @@ const Loader = (styles) => {
     >
       <CircularProgress style={{ color: "#fff" }} />
     </Box>
-  )
-}
+  );
+};
 
-
-export default Loader
+export default Loader;

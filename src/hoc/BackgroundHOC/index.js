@@ -1,1 +1,1 @@
-export { default } from './BackgroundHOC'
+export { default } from "./BackgroundHOC";

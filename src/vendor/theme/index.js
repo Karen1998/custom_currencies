@@ -1,60 +1,59 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-
+import { createMuiTheme } from "@material-ui/core/styles";
 
 const palette = {
   primary: {
-    main: '#082C7F',
+    main: "#082C7F",
   },
   secondary: {
-    main: '#2196f3',
+    main: "#2196f3",
   },
   text: {
-    primary: '#fff'
-  }
+    primary: "#fff",
+  },
 };
 
 const typography = {
   h1: {
-    color: 'currentColor'
+    color: "currentColor",
   },
   h2: {
-    color: 'currentColor'
+    color: "currentColor",
   },
   h3: {
-    color: 'currentColor'
+    color: "currentColor",
   },
   h4: {
-    color: 'currentColor'
+    color: "currentColor",
   },
   h5: {
-    color: 'currentColor'
+    color: "currentColor",
   },
   h6: {
-    color: 'currentColor'
+    color: "currentColor",
   },
 };
 
 const theme = createMuiTheme({
-  palette: palette,
+  palette,
   overrides: {
     MuiTypography: {
       typography,
     },
     MuiButton: {
       root: {
-        fontWeight: 500
+        fontWeight: 500,
       },
       contained: {
         backgroundColor: palette.secondary.main,
         color: palette.text.primary,
-      }
+      },
     },
     MuiPaper: {
       root: {
-        backgroundColor: 'inherit'
-      }
-    }
-  }
+        backgroundColor: "inherit",
+      },
+    },
+  },
 });
 
 export default theme;

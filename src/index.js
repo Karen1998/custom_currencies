@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { ThemeProvider } from '@material-ui/core'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { ThemeProvider } from "@material-ui/core";
 
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import store from './store/store';
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import store from "./store/store";
 
-import './vendor/styles/reset.css' // Reset styles
-import './vendor/styles/common.css' // Reset styles
-import theme from './vendor/theme'; // Material override theme
+import "./vendor/styles/reset.css"; // Reset styles
+import "./vendor/styles/common.css"; // Reset styles
+import theme from "./vendor/theme"; // Material override theme
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,7 +19,7 @@ ReactDOM.render(
       </Provider>
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
