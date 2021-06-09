@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from '@material-ui/core'
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './store/store';
+
+import './vendor/styles/reset.css' // Reset styles
+import './vendor/styles/common.css' // Reset styles
+import theme from './vendor/theme'; // Material override theme
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
